@@ -12,17 +12,23 @@ var app = angular.module('CursoJSangular', []);
 
 app.controller('controlAdivinaNumero', function($scope) {
 	$scope.adivina = {};
-	$scope.adivina.numero = "";
+	$scope.adivina.numIngresado = "";
 	$scope.adivina.contador = "";
 	$scope.adivina.numSecreto = "";
 
 	$scope.Verificar = function(){
 		var contador = parseInt($scope.adivina.contador);
-
-		if(parseInt($scope.adivina.numero) == $scope.adivina.numSecreto)
-			alert("ACERTO! numero secreto: " + $scope.adivina.numSecreto);
+		contador++;
+		
+		if(parseInt($scope.adivina.numIngresado) == $scope.adivina.numSecreto)
+			alert("ACERTO! y sólo en " + contador + " intentos// Número secreto: " + $scope.adivina.numSecreto);
 		else
-			contador++;
+		{
+				if(parseInt($scope.adivina.numIngresado) > $scope.adivina.numSecreto)
+					alert("Se paso!");
+				else
+					alert("Le falta para llegar!");
+		}
 
 		$scope.adivina.contador = contador;
 	}
