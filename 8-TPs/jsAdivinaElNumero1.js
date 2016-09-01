@@ -10,7 +10,7 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 
 var app = angular.module('CursoJSangular', []);
 
-app.controller('controlAdivinaNumero', function($scope) {
+app.controller('controlAdivinaNumero', function($scope){
 	$scope.adivina = {};
 	$scope.adivina.numIngresado = "";
 	$scope.adivina.contador = "";
@@ -19,7 +19,7 @@ app.controller('controlAdivinaNumero', function($scope) {
 	$scope.Verificar = function(){
 		var contador = parseInt($scope.adivina.contador);
 		contador++;
-		
+
 		if(parseInt($scope.adivina.numIngresado) == $scope.adivina.numSecreto)
 			alert("ACERTO! y sólo en " + contador + " intentos// Número secreto: " + $scope.adivina.numSecreto);
 		else

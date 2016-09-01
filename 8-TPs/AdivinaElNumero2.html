@@ -10,35 +10,35 @@
 		<!--final de Estilos-->
 
 		<!--Lógica-Programación-->
+		<script SRC="../bower_components/angular/angular.min.js" TYPE="text/javascript"></script>
 		<script type="text/javascript" src="jsAdivinaElNumero2.js"></script>
         <!--Final de Lógica-Programación -->
-		
+
 
 		</head>
-	<body>
+	<body ng-app="AdivinaNumeroEj2" ng-controller="ControlAdivina2">
 		<div class="CajaUno animated bounceInDown">
-			
-		
+
 			<form id="FormIngreso">
 
-				<input type="text"  placeholder="Ingrese número" id="numero">
-				
+				<input type="text"  placeholder="Ingrese número" ng-model="adivina2.numIngresado" id="numero">
+
 				<br>
-				<input type="text"  placeholder="intentos" readonly id="intentos">
+				<input type="text"  placeholder="intentos" readonly ng-model="adivina2.intentos" id="intentos">
 			</form>
-			
+
 		</div>
 		<div class="CajaUno animated bounceInLeft">
-			
-		<button style="height:5em;" class="MiBotonUTN"  onclick="verificar()" >Verificar</button>
-			
-			<button  class="MiBotonUTN" onclick="comenzar()" >Comenzar</button>
+
+		<button style="height:5em;" class="MiBotonUTN"  ng-click="Verificar()" >Verificar</button>
+
+			<button  class="MiBotonUTN" ng-click="Comenzar()" >Comenzar</button>
 
 		</div>
 
 		<div class="CajaEnunciado animated bounceInLeft">
 			<h2>Enunciado:</h2>
-			
+
 				<h3>
 					1.	Adivina el número (v 2.0):
 					En esta oportunidad el juego evaluará tus aptitudes a partir de la cantidad de intentos, por lo cual se informará lo siguiente:
@@ -52,12 +52,12 @@
 
 
 				</h3>
-			
-			
+
+
 		</div>
 
 		<div class="CajaAbajo animated bounceInUp">
-			<a  class="MiBotonUTNLinea" onclick="location.href='index.html'" >Men&uacute; ejercicios</a>	
+			<a  class="MiBotonUTNLinea" onclick="location.href='index.html'" >Men&uacute; ejercicios</a>
 		</div>
 	</body>
 </html>
