@@ -1,3 +1,3 @@
 # CursoIngresoJS
 Curso de ingreso con JavaScript
-dsasadsadsadasdsad
+Adaptación para su uso con Angular JS
