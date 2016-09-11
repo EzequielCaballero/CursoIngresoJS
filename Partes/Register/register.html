@@ -1,0 +1,61 @@
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+      <form action="index.html" method="post">
+      
+        <h1>Registrese</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Datos de cuenta</legend>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="user_name">
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email">
+          
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="user_password">
+
+          <label for="password">Confirmar Contraseña:</label>
+          <input type="password" id="password" name="user_password">
+          
+          <label>Edad:</label>
+          <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+          <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>
+        </fieldset>
+        
+        <fieldset>
+          <legend><span class="number">2</span>Su perfil</legend>
+        <label for="job">Lenguaje de programación:</label>
+        <select id="job" name="user_job">
+          <optgroup label="Web">
+            <option value="frontend_developer">Front-End Javascript</option>
+            <option value="php_developor">PHP Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="rails_developer"> Rails Developer</option>
+            <option value="web_designer">Web Designer HTML-CSS</option>
+          </optgroup>
+          <optgroup label="Mobile">
+            <option value="Android_developer">Androild Developer</option>
+            <option value="iOS_developer">iOS Developer</option>
+            <option value="mobile_designer">Mobile Designer</option>
+          </optgroup>
+          <optgroup label=".NET">
+            <option value="business_owner">Visual Basic</option>
+            <option value="freelancer">Csharp</option>
+          </optgroup>
+        </select>
+        
+        </fieldset>
+        <button type="submit">Registrarse!</button>
+        <br><a class="linkLogin" href="../Login/login.html">¿Ya posee una cuenta? Inicie Sesión</a>
+      </form>
+      
+    </body>
+</html>
