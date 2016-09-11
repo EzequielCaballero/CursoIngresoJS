@@ -5,6 +5,8 @@
 		<title>Curso Ingreso UTN FRA</title>
 
 		<!--Estilos-->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/jquery/dist/jquery.min.js">
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link rel="stylesheet" type="text/css" href="css/animacion.css">
 		<!--final de Estilos-->
@@ -13,28 +15,30 @@
 
         <!--Final de Lógica-Programación -->
 
-
+        <ul id="main-nav" class="nav nav-tabs">
+		         <li  class="btn btn-info animated bounceInLeft" >
+		         	<a  onclick="location.href='Sala de Juegos/index.html'" >
+		         		 <span class="glyphicon glyphicon-list-alt">&nbsp;</span>
+		         		 Sala de Juegos
+		         	</a>
+		         </li>
+		         <li class="btn btn-info animated bounceInLeft" >
+		         	<a href='pdfs/Guia de TPs curso de ingreso.pdf'>
+		         		<span class="glyphicon glyphicon-plus-sign">&nbsp;</span>
+		         		PDF Trabajos
+		         	</a>
+		         </li>
+		         <li  class="btn btn-info animated bounceInLeft" >
+		         	<a href='http://www.w3schools.com/js/default.asp'>
+		         		<span class="glyphicon glyphicon-th" >&nbsp;</span>
+		         			W3SCHOOL</a>
+		         		</li>
+							<li  id="iconoLogin" class="btn btn-info animated bounceInLeft" >
+ 		         	<a href=''>
+ 		         		<span class="glyphicon glyphicon-user" >&nbsp;</span>
+ 		         			LOGUEO</a>
+ 		         		</li>
+		        	<span id="tituloBarra"  class="animated bounceInRight"></span>
+      	</ul>
 	</head>
-	<body>
-		<div class="CajaInicio animated bounceInRight">
-			<h1>UTN FRA</h1>
-			<form id="FormIngreso">
-
-					<img src="img/inicio.png" style="width: 500px;float: right;">
-
-				<a  class="MiBotonUTNMenuInicio" onclick="location.href='Sala de Juegos/index.html'" >TPs</a>				
-				<a  class="MiBotonUTNMenuInicio" target="_blank" href='pdfs/Guia de TPs curso de ingreso.pdf' >PDF Tps </a>
-				<a  class="MiBotonUTNMenuInicio" target="_blank" href='http://www.w3schools.com/js/default.asp' >W3School</a>
-
-
-			</form>
-
-
-		</div>
-
-		<center>
-
-		</center>
-
-	</body>
 </html>
