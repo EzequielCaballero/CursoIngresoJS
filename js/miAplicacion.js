@@ -4,15 +4,15 @@ var miApp = angular.module('CursoIngresoJS', ['ui.router']);
 miApp.config(function($stateProvider, $urlRouterProvider){
 	$stateProvider
 	.state(
-    	"MenuPrincipal", {
-    		url:"/MenuPrincipal",
-    		templateUrl:"Partes/MenuPrincipal/menuPrincipal.html",
+    	"MenuInicio", {
+    		url:"/MenuInicio",
+    		templateUrl:"Partes/MenuInicio/menuInicio.html",
     		controller:"controlMenuPrincipal"
 
     	}
     	)
     .state(
-    	"login", {
+    	"MenuInicio.login", {
     		url:"/login",
     		views:{
     			"contenido":{
@@ -24,13 +24,13 @@ miApp.config(function($stateProvider, $urlRouterProvider){
     	}
     	)
 
-    $urlRouterProvider.otherwise("/MenuPrincipal");
+    $urlRouterProvider.otherwise("/MenuInicio");
 });
 
 miApp.controller('controlMenuPrincipal', function($scope, $state){
 	$scope.irLogin=function(){
 
-		$state.go("login");
+		$state.go("MenuInicio.login");
 
 	};
 });
