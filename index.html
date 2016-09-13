@@ -4,49 +4,28 @@
 		<meta charset="utf-8">
 		<title>Curso Ingreso UTN FRA</title>
 
-		<!--Estilos-->
+		<!--ANGULAR JS aplicación-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    	<script src="js/miAplicacion.js"</script>
+
+    	<!-- jQuery -->
+    	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    	<!-- Bootstrap Core JavaScript -->
+    	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+
+    	<!--Estilos-->
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/estiloPrincipal.css">
 		<link rel="stylesheet" type="text/css" href="css/estiloLogin.css">
 		<link rel="stylesheet" type="text/css" href="css/animacion.css">
 		<!--final de Estilos-->
 
-		<!--Lógica-Programación-->
-		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="bower_components/jquery/dist/jquery.js"></script>
-		<!--ANGULAR JS aplicación-->
-		<script src="bower_components/angular/angular.js"</script>
-    	<script src="js/miAplicacion.js"</script>
-        <!--Final de Lógica-Programación -->
+    </head>
+    <body ng-app="CursoIngresoJS">
+    	<div ui-view>
+    		<div ui-view name="contenido"></div>
+    	</div>
 
-        <ul id="main-nav" class="nav nav-tabs">
-		         <li  class="btn btn-info animated bounceInLeft" >
-		         	<a  onclick="location.href='Sala de Juegos/index.html'" >
-		         		 <span class="glyphicon glyphicon-list-alt">&nbsp;</span>
-		         		 Sala de Juegos
-		         	</a>
-		         </li>
-		         <li class="btn btn-info animated bounceInLeft" >
-		         	<a href='pdfs/Guia de TPs curso de ingreso.pdf'>
-		         		<span class="glyphicon glyphicon-plus-sign">&nbsp;</span>
-		         		PDF Trabajos
-		         	</a>
-		         </li>
-		         <li  class="btn btn-info animated bounceInLeft" >
-		         	<a href='http://www.w3schools.com/js/default.asp'>
-		         		<span class="glyphicon glyphicon-th" >&nbsp;</span>
-		         			W3SCHOOL</a>
-		         		</li>
-							<li  id="iconoLogin" class="btn btn-info animated bounceInLeft" >
- 		         	<a href='Partes/Login/login.html'>
- 		         		<span class="glyphicon glyphicon-user" >&nbsp;</span>
- 		         			LOGUEO</a>
- 		         		</li>
-		        	<span id="tituloBarra"  class="animated bounceInRight"></span>
-      	</ul>
-
-      	<div>
-
-      	</div>
-	</head>
+	</body>
 </html>
