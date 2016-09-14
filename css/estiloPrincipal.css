@@ -6,105 +6,410 @@ input.ng-valid {
     background-color: lightgreen;
 }
 
-
-span{
-  color:black;
+/************************************************************************************
+RESET
+*************************************************************************************/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+  margin: 0;
+  padding: 0;
 }
 
-input[type="text"], input[type="password"], input[type="email"]{
+img, fieldset {
+  border: 0;
+}
+/* set image max width to 100% */
+img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/************************************************************************************
+ESTILO GENERAL
+*************************************************************************************/
+body {
+  background: #CCCDCD !important;
+  font: .81em/150% Arial, Helvetica, sans-serif;
+  color: #666;
+}
+a {
+  color: #026acb;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  margin: 0 0 1.2em;
+  padding: 0;
+}
+
+/* list */
+ul, ol {
+  margin: 1em 0 1.4em 24px;
+  padding: 0;
+  line-height: 140%;
+}
+li {
+  margin: 0 0 .5em 0;
+  padding: 0;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4em;
+  margin: 20px 0 .4em;
+  color: #000;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1.1em;
+}
+h6 {
+  font-size: 1em;
+}
+
+/************************************************************************************
+BOTONES
+*************************************************************************************/
+.button, .button-log{
+    border-radius: 2px;
+    line-height: 100%;
+    background-color: #4C94AF;
+    border: none;
+    color: #fff;
+    display: block;
+    width: 125px;
+    padding: 14px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.7s;
+}
+
+/************************************************************************************
+ESTRUCTURA
+*************************************************************************************/
+#posicionPagina{
   width: 100%;
-  display: block;
-  color:black;
-height: 3em;
-}
-.nav-tabs {
-    border-bottom: 1px solid #151313 !important;
-        background-color: rgba(0, 0, 0, 0.33);
-            padding: 5px;
-}
-li.btn {
-    height: 49px;
-
+  top: 0px;
+  margin: 0 auto;
 }
 
-#iconoLogin{
-	float:right;
-}
-
-* {
-  margin:0;
-  padding:0;
-  border-radius: 10px;
-}
-
-.table-hover>tbody>tr:hover {
-      background-color: #8387F1;
-       border-radius: 0px ;
-}
-.table-hover>tbody>tr>td {
-
-       border-radius: 0px ;
-}
- .btn{
-      box-shadow: 1px 2px 5px #000000;
-  }
-#tituloBarra{
-
-  float: right;
-}
-.fotoGrilla {
-  width: 40px;
-  height: 40px;
-}
-.fotoform {
-  max-width: 200px;
-  max-height: 200px;
-}
-
-.container {
-   margin-top: 12px;
-}
+/************************************************************************************
+HEADER
+*************************************************************************************/
 #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #333;
-    color: #FFFFFF;
-    padding: 10px;
-    z-index: 1;
+  position: relative;
+  height: 100px;
 }
-/************************************************************************/
+
+#cartel{
+  font: 100%/130% "Times New Roman", Times, serif;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #0E1D1F;
+}
+
+/************************************************************************************
+MENU INICIO
+*************************************************************************************/
+#main-nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  z-index: 100;
+  /* gradient */
+  background: #313F45;
+  /* box shadow */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 1px rgba(0,0,0,.4);
+}
+#main-nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  position: relative;
+}
+
+/*#main-nav li:first-child {
+  margin-left: 10px;
+}*/
+#main-nav li:last-child {
+  float:right;
+}
+
+#main-nav a {
+  text-decoration: none;
+}
+
+#main-nav a:hover {
+  color: #fff;
+  background: #474747;
+  /* gradient */
+  background: -webkit-gradient(linear, left top, left bottom, from(#1E3F3F), to(#1F5051));
+  background: -moz-linear-gradient(top,  #1E3F3F,  #1F5051);
+  background: linear-gradient(-90deg, #1E3F3F, #1F5051);
+}
+
+#main-nav #LogIn:hover{
+  background: -webkit-gradient(linear, left top, left bottom, from(#39602E), to(#5F9E3B));
+  background: -moz-linear-gradient(top,  #39602E,  #5F9E3B);
+  background: linear-gradient(-90deg, #39602E, #5F9E3B);
+}
+
+#main-nav #LogOut:hover{
+  background: -webkit-gradient(linear, left top, left bottom, from(#3F2020), to(#753333));
+  background: -moz-linear-gradient(top,  #3F2020,  #753333);
+  background: linear-gradient(-90deg, #3F2020, #753333);
+}
+
+#main-nav #iconoLogin{
+  float:right;
+}
+/************************************************************************************
+CONTENIDO PAGINA
+*************************************************************************************/
+#content {
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px 35px;
+  width: 50%;
+  position: relative;
+}
+
+.principal{
+  background: #fff;
+  
+  /* rounded corner */
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  /* box shadow */
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+
+
+/************************************************************************************
+LOGIN PAGE
+*************************************************************************************/
+
 * {
-  margin:0;
-  padding:0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+/*ESTILOS PARA ERROR NG-ANGULAR*/
+input.ng-invalid {
+    background-color: #832424;
+}
+input.ng-valid {
+    background-color: #1C5218;
+}
+/*FIN ESTILOS PARA ERROR NG-ANGULAR*/
 
 body {
-  margin: 0 auto;
-  color:#f0f0f0;
-  background:#3f51b5;
-  font-family:'Open Sans',sans-serif;
+  background: #333;
+  font: 100%/1 "Helvetica Neue", Arial, sans-serif;
 }
 
-caption {
-  font-size: 1.6em;
-  font-weight: 400;
-  padding: 10px 0;
+.login {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  margin: -10rem 0 0 -10rem;
+  margin-top: 55px;
+  width: 480px;
+  height: 480px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.login:hover > .login-header, .login.focused > .login-header {
+  width: 4rem;
+}
+.login:hover > .login-header > .text, .login.focused > .login-header > .text {
+  font-size: 2rem;
+  transform: rotate(-90deg);
+}
+.login.loading > .login-header {
+  width: 480px;
+}
+.login.loading > .login-header > .text {
+  display: none;
+}
+.login.loading > .login-header > .loader {
+  display: block;
 }
 
-.CajaUno {
-
-  max-width: 30%;
-  width:400px;
-  margin:0 auto;
-  margin-top:8px;
-  margin-bottom:2%;
-  transition:opacity 1s;
-  -webkit-transition:opacity 1s;
+.login-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 480px;
+  height: 480px;
+  background: #377E24;
+  transition: width 0.5s ease-in-out;
+}
+.login-header > .text {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+  text-align: center;
+  line-height: 480px;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.login-header > .loader {
+  display: none;
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: loading 2s linear infinite;
+}
+.login-header > .loader:after {
+  content: "";
+  position: absolute;
+  left: 4.5rem;
+  top: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  border-right: 2px solid #377E24;
+}
+.login-header > .loader:before {
+  content: "";
+  position: absolute;
+  left: 4rem;
+  top: -0.5rem;
+  width: 0;
+  height: 0;
+  border-right: 1rem solid #fff;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
 }
 
-.CajaInicio {
+@keyframes loading {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.login-form {
+  margin: 0 0 0 2rem;
+  padding: 0.5rem;
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  font-size: 35px;
+  padding: 0.5rem 1rem;
+  box-shadow: none;
+  border-color: #ccc;
+  border-width: 0 0 2px 0;
+}
+.login-input + .login-input {
+  margin: 10px 0 0;
+}
+.login-input:focus {
+  outline: none;
+  border-bottom-color: #377E24;
+}
+
+.login-btn {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background: #377E24;
+  border-radius: 50%;
+  font-size: 0;
+  border: 0.6rem solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.login-btn:after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  width: 0;
+  height: 0;
+  border-left: 2.4rem solid #fff;
+  border-top: 1.2rem solid transparent;
+  border-bottom: 1.2rem solid transparent;
+  transition: border 0.3s ease-in-out 0s;
+}
+.login-btn:hover, .login-btn:focus, .login-btn:active {
+  background: #fff;
+  border-color: #377E24;
+  outline: none;
+}
+.login-btn:hover:after, .login-btn:focus:after, .login-btn:active:after {
+  border-left-color: #377E24;
+}
+
+.linkRegistro{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-size: 25px;
+  width: 50%;
+}
+
+/************************************************************************************
+REGISTER PAGE
+*************************************************************************************/
+
+/************************************************************************************
+SALA JUEGOS PAGE
+*************************************************************************************/
+.CajaSalaJuegos{
   width:750px;
   margin:0 auto;
   margin-top:8px;
@@ -112,222 +417,9 @@ caption {
   transition:opacity 1s;
   -webkit-transition:opacity 1s;
 }
-.CajaEnunciado {
-  max-width: 30%;
-  border: dashed;
- position: fixed;
-background: royalblue;
-top: 0px;
-width: 400px;
-margin: 0;
-padding: 10px;
-/* margin-top: 8px; */
-margin-bottom: 2%;
-transition: opacity 1s;
--webkit-transition: opacity 1s;
-border-radius: 15px;
--webkit-border-radius: 15px;
-}
-.CajaInicio h1{
-  background:rgb(14, 26, 112);;
-  padding:20px 0;
-  font-size:140%;
-  font-weight:300;
-  text-align:center;
-  color:#fff;
-}
-.CajaAbajo {
-   margin-top: 100px;
-  width:400px;
-  top:0px;
-left:0px;
-  transition:opacity 1s;
-  -webkit-transition:opacity 1s;
-}
-.CajaArriva {
-  margin-top: 20px;
-  width:400px;
-  top:0px;
-  left:0px;
-  transition:opacity 1s;
-  -webkit-transition:opacity 1s;
-}
 
-#FormIngreso {
-
-  background:#f0f0f0;
-  padding:6% 4%;
-}
-
-input[type="text"]{
-  width:92%;
-  background:#fff;
-  margin-bottom:4%;
-  border:1px solid #ccc;
-  padding:4%;
-  font-family:'Open Sans',sans-serif;
-  font-size:95%;
-  color:#555;
-}
-select{
-  width:100%;
-  background:#fff;
-  margin-bottom:4%;
-  border:1px solid #ccc;
-  padding:4%;
-  font-family:'Open Sans',sans-serif;
-  font-size:95%;
-  color:#555;
-}
-
-
-.MiBotonUTN {
-  display:block;
-  text-transform: capitalize;
-  border:hidden;
-  width:100%;
-  background:#f50056;
-  margin:0 auto;
-  margin-top:1%;
-  padding:10px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-
-.MiBotonUTN:hover{
-  background:#1BA045;
-}
-.MiBotonUTNJuego {
-
-  text-transform: capitalize;
-  border:hidden;
-  width:32%;
-  background:#f50056;
-  margin:0 auto;
-  margin-top:1%;
-  padding:10px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-.MiBotonUTNMenu {
-  display:block;
-  text-transform: capitalize;
-  border:hidden;
-  width:100px;
-  background:#f50056;
-  margin-top:1%;
-  padding:6px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-
-.MiBotonUTNMenu:hover{
- background: #1e5799; /* Old browsers */
-background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 16%, #2989d8 16%, #ffffff 36%, #ffffff 43%, #ebf709 48%, #ffffff 52%, #ffffff 61%, #207cca 82%, #207cca 99%, #207cca 99%, #7db9e8 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#1e5799), color-stop(16%,#2989d8), color-stop(16%,#2989d8), color-stop(36%,#ffffff), color-stop(43%,#ffffff), color-stop(48%,#ebf709), color-stop(52%,#ffffff), color-stop(61%,#ffffff), color-stop(82%,#207cca), color-stop(99%,#207cca), color-stop(99%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(45deg, #1e5799 0%,#2989d8 16%,#2989d8 16%,#ffffff 36%,#ffffff 43%,#ebf709 48%,#ffffff 52%,#ffffff 61%,#207cca 82%,#207cca 99%,#207cca 99%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(45deg, #1e5799 0%,#2989d8 16%,#2989d8 16%,#ffffff 36%,#ffffff 43%,#ebf709 48%,#ffffff 52%,#ffffff 61%,#207cca 82%,#207cca 99%,#207cca 99%,#7db9e8 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(45deg, #1e5799 0%,#2989d8 16%,#2989d8 16%,#ffffff 36%,#ffffff 43%,#ebf709 48%,#ffffff 52%,#ffffff 61%,#207cca 82%,#207cca 99%,#207cca 99%,#7db9e8 100%); /* IE10+ */
-background: linear-gradient(45deg, #1e5799 0%,#2989d8 16%,#2989d8 16%,#ffffff 36%,#ffffff 43%,#ebf709 48%,#ffffff 52%,#ffffff 61%,#207cca 82%,#207cca 99%,#207cca 99%,#7db9e8 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-color:black;
-}
-
-.MiBotonUTNLinea{
-  max-width: 150px;
-position: absolute;
-  text-transform: capitalize;
-  border:hidden;
-  width:100%;
-  background:#00A1F5;
-  margin:0 auto;
-  margin-top:30%;
-  padding:10px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-.MiBotonUTNLinea:hover{
-  background:red;
-  /*text-transform: uppercase;*/
-}
-
-.MiBotonUTNMenuInicio {
-  display:block;
-
-  border:hidden;
-  width:150px;
-  background:blue;
-  margin-top:1%;
-  padding:6px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-.MiBotonUTNMenuInicio:hover{
-  background:#4a4a71;
-}
-
-.MiBotonUTNMenuInicioParcial {
-  display:block;
-
-  border:hidden;
-  width:150px;
-  background:red;
-  margin-top:1%;
-  padding:6px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  -moz-border-radius:7px;
-  -webkit-border-radius:7px;
-  border-radius:7px;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-.MiBotonUTNMenuInicioParcial:hover{
-  background:green;
-}
-
-
-
-
-.CajaUno h1{
-  background:#f50056;
+.CajaSalaJuegos h1{
+  background:rgb(14, 26, 112);; 
   padding:20px 0;
   font-size:140%;
   font-weight:300;
@@ -335,16 +427,46 @@ position: absolute;
   color:#fff;
 }
 
-.CajaUno a:hover {
-  color:#f50056;
+.buttonJuegos{
+    border-radius: 2px;
+    line-height: 100%;
+    background-color: #A16331;
+    border: none;
+    color: #fff;
+    display: block;
+    width: 750px;
+    padding: 14px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.7s;
 }
 
-
-
-.CajaUno a {
-  color:#DDDDDD;
+/************************************************************************************
+PIE DE PAGINA
+*************************************************************************************/
+#footer {
+  border-radius: 5px;
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  width: 70%;
+  color: #363636;
+  font-size: 85%;
+  font-weight: bold;
+}
+#footer a {
+  color: #fff;
 }
 
+/************************************************************************************
+EXTRA
+*************************************************************************************/
 .PiedraPapelTijera
 {
   width: 100px;

@@ -12,17 +12,19 @@
     	<!-- jQuery -->
     	<script src="bower_components/jquery/dist/jquery.min.js"></script>
     	<!-- Bootstrap Core JavaScript -->
-    	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     	<!--Estilos-->
-		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/estiloPrincipal.css">
-		<link rel="stylesheet" type="text/css" href="css/estiloLogin.css">
 		<link rel="stylesheet" type="text/css" href="css/animacion.css">
 		<!--final de Estilos-->
 
     </head>
-    <body ng-app="CursoIngresoJS">
+    <body id="posicionPagina" ng-app="CursoIngresoJS">
+    	<hgroup>
+			<h3 id="cartel">FACULTAD REGIONAL AVELLANEDA - UTN</h3>
+		</hgroup>
+    	
     	<div ui-view></div>
 
 	</body>

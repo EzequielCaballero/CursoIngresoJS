@@ -7,8 +7,7 @@ miApp.config(function($stateProvider, $urlRouterProvider){
     	"MenuInicio", {
     		url:"/MenuInicio",
     		templateUrl:"Partes/MenuInicio/menuInicio.html",
-    		controller:"controlMenuPrincipal"
-
+    		controller:"controlMenuInicio"
     	}
     	)
     .state(
@@ -20,17 +19,32 @@ miApp.config(function($stateProvider, $urlRouterProvider){
     				controller:"controlLogin"
     			}
     		}
-
     	}
     	)
+    .state(
+		"MenuInicio.salaJuegos", {
+			url:"/salaJuegos",
+			views:{
+				"contenido":{
+					templateUrl:"Partes/SalaJuegos/salaJuegos.html",
+					controller:"controlSalaJuegos"
+				}
+			}
+		}
+		)
 
     $urlRouterProvider.otherwise("/MenuInicio");
 });
 
-miApp.controller('controlMenuPrincipal', function($scope, $state){
+miApp.controller('controlMenuInicio', function($scope, $state){
 	$scope.irLogin=function(){
 
 		$state.go("MenuInicio.login");
+
+	};
+	$scope.irSala=function(){
+
+	$state.go("MenuInicio.salaJuegos");
 
 	};
 });
@@ -45,4 +59,8 @@ miApp.controller('controlLogin', function($scope){
 		console.log("Me estoy logueando");
 		console.log($scope.usuario);
 	}
+});
+
+miApp.controller('controlSalaJuegos', function($scope){
+
 });
