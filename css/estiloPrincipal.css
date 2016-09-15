@@ -90,6 +90,12 @@ h6 {
   font-size: 1em;
 }
 
+input[type="text"], input[type="password"], input[type="email"]{
+  width: 100%;
+  display: block;
+  color:black;
+  height: 3em;
+}
 /************************************************************************************
 BOTONES
 *************************************************************************************/
@@ -421,10 +427,11 @@ SALA JUEGOS PAGE
 .CajaSalaJuegos h1{
   background:rgb(14, 26, 112);; 
   padding:20px 0;
-  font-size:140%;
+  font-size:200%;
   font-weight:300;
   text-align:center;
   color:#fff;
+  border-radius: 20px;
 }
 
 .buttonJuegos{

@@ -1,16 +1,17 @@
 <div class="CajaSalaJuegos animated bounceInRight">
-	<h1>Trabajos Pr&aacute;cticos: </br> Curso de ingreso</h1>
+	<h1>JUEGOS ACTIVOS</h1>
 	<form id="FormIngreso" style="min-height: 480px;">
 
-			
-		<a  class="buttonJuegos" title="Adivina el n&uacute;mero v2.0" onclick="location.href='AdivinaElNumero2.html'" >Adivina el número</a><br>
-		<a  class="buttonJuegos" title="Piedra, papel o tijera v1.0"  onclick="location.href='PiedarPapelTijera1.html'" >Piedra, Papel o Tijera 1</a><br>
-		<a  class="buttonJuegos" title="Piedra, papel o tijera v2.0" onclick="location.href='PiedarPapelTijera2.html'" >Piedra, Papel o Tijera 2</a><br>
-		<a  class="buttonJuegos" title="Agilidad aritm&eacute;tica v1.0"onclick="location.href='AgilidadAritmetica1.html'" >Agilidad Aritmética 1 </a><br>
-		<a  class="buttonJuegos" title="Agilidad aritm&eacute;tica v2.0"onclick="location.href='AgilidadAritmetica2.html'" >Agilidad Aritmética 2</a><br>
-		<a  class="buttonJuegos" title="Reflejos dalt&oacute;nicos v1.0"onclick="location.href='ReflejosDaltonicos1.html'" >Reflejos daltónicos</a><br>
-		<a  class="buttonJuegos" title="estad&iacute;sticas y censos "onclick="location.href='RisingBTL.html'" >Rising BTL</a><br>
-		<a  class="buttonJuegos" title="instituto matem&aacute;tico  FonteCristo  "onclick="location.href='FonteCristo.html'" >Fonte Cristo</a><br>
+		<a  class="buttonJuegos" title="Adivina el n&uacute;mero v2.0" ng-click="irJuego(1)" >Adivina el número - 1</a><br>
+		<a  class="buttonJuegos" title="Adivina el n&uacute;mero v2.0" ng-click="irJuego(2)" >Adivina el número - 2</a><br>
+		<a  class="buttonJuegos" title="Piedra, papel o tijera v1.0"  ng-click="irJuego(3)" >Piedra, Papel o Tijera - 1</a><br>
+		<a  class="buttonJuegos" title="Piedra, papel o tijera v2.0" ng-click="irJuego(4)" >Piedra, Papel o Tijera - 2</a><br>
+		<a  class="buttonJuegos" title="Agilidad aritm&eacute;tica v1.0" ng-click="irJuego(5)" >Agilidad Aritmética - 1 </a><br>
+		<a  class="buttonJuegos" title="Agilidad aritm&eacute;tica v2.0" ng-click="irJuego(6)" >Agilidad Aritmética - 2</a><br>
+		<a  class="buttonJuegos" title="Reflejos dalt&oacute;nicos v1.0" ng-click="irJuego(7)" >Reflejos daltónicos</a><br>
+		<a  class="buttonJuegos" title="estad&iacute;sticas y censos " ng-click="irJuego(8)" >Rising BTL</a><br>
+		<a  class="buttonJuegos" title="instituto matem&aacute;tico  FonteCristo  " ng-click="irJuego(9)" >Fonte Cristo</a><br>
 
 	</form>
 </div>
+<div ui-view="juegos"></div>
